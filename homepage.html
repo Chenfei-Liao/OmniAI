@@ -57,7 +57,35 @@
         .logo span {
             color: var(--accent-teal);
         }
+
+        /* 在CSS中添加以下样式 */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
         
+        .company-logo {
+            height: 40px; /* 根据需要调整 */
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        /* 悬停效果 */
+        .company-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .company-logo {
+                height: 30px;
+            }
+            
+            .logo-text {
+                display: none; /* 小屏幕上隐藏文字 */
+            }
+        }
         .nav-links {
             display: flex;
             gap: 30px;
@@ -498,15 +526,20 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">Omni<span>AI</span></div>
-        <div class="nav-links">
-            <a href="#overview">Company Overview</a>
-            <a href="#roadmap-section">Development Roadmap</a>
-            <a href="#papers">Research Papers</a>
-            <a href="#team">Research Team</a>
-        </div>
-    </nav>
+    <div class="logo-container">
+        <!-- 替换为您的Logo图片路径 -->
+        <img src="logo.png"
+             alt="OmniAI Logo" class="company-logo">
+        <span class="logo-text">Omni<span>AI</span></span>
+    </div>
     
+    <div class="nav-links">
+        <a href="#overview">Company Overview</a>
+        <a href="#roadmap-section">Development Roadmap</a>
+        <a href="#papers">Research Papers</a>
+        <a href="#team">Research Team</a>
+    </div>
+</nav>
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
