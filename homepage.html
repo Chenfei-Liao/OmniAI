@@ -332,17 +332,22 @@
         }
         
         .member-avatar {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            background: var(--dark-blue);
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: var(--accent-teal);
+            overflow: hidden;
             border: 3px solid var(--accent-teal);
+            box-shadow: 0 0 20px rgba(42, 157, 143, 0.3);
+        }
+        
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .team-member h4 {
