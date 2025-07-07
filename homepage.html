@@ -493,6 +493,83 @@
                 font-size: 1.1rem;
             }
         }
+                .paper-list {
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(168, 218, 220, 0.2);
+        }
+        
+        .paper-header {
+            display: grid;
+            grid-template-columns: 1fr 150px 100px;
+            background: rgba(10, 26, 74, 0.8);
+            padding: 15px 20px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(168, 218, 220, 0.3);
+        }
+        
+        .paper-item {
+            display: grid;
+            grid-template-columns: 1fr 150px 100px;
+            padding: 15px 20px;
+            background: rgba(10, 26, 74, 0.5);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(168, 218, 220, 0.1);
+        }
+        
+        .paper-item:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-item:hover {
+            background: rgba(42, 157, 143, 0.1);
+        }
+        
+        .paper-title {
+            font-weight: 500;
+        }
+        
+        .paper-title a {
+            color: var(--light-blue);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .paper-title a:hover {
+            color: var(--accent-teal);
+            text-decoration: underline;
+        }
+        
+        .paper-conference {
+            color: var(--light-blue);
+            font-style: italic;
+        }
+        
+        .paper-year {
+            color: var(--accent-teal);
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        @media (max-width: 768px) {
+            .paper-header {
+                display: none;
+            }
+            
+            .paper-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 20px;
+            }
+            
+            .paper-conference, .paper-year {
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -595,8 +672,8 @@
             </div>
         </div>
     </section>
-    
-    <!-- Research Papers -->
+
+        <!-- Research Papers -->
     <section class="section" id="papers">
         <div class="section-title">
             <h2>Research Papers</h2>
@@ -632,8 +709,79 @@
                     <p>Addressing distortion, domain gaps, and real-world adaptability</p>
                 </div>
             </div>
+            
+            <!-- 新增Paper List部分 -->
+            <h3 style="margin-top: 40px; margin-bottom: 20px;"><i class="fas fa-list"></i> Full Paper List</h3>
+            <div class="paper-list">
+                <div class="paper-header">
+                    <div>Title</div>
+                    <div>Conference/Journal</div>
+                    <div>Year</div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2503.07098" target="_blank">
+                            <i class="fas fa-file-pdf"></i> OmniSAM: Omnidirectional Semantic Segmentation with Distortion-Aware Transformers
+                        </a>
+                    </div>
+                    <div class="paper-conference">ICCV 2025</div>
+                    <div class="paper-year">2025</div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/pdf/2505.14197" target="_blank">
+                            <i class="fas fa-file-pdf"></i> 360-R1: A Benchmark for Omnidirectional Spatial Reasoning
+                        </a>
+                    </div>
+                    <div class="paper-conference">Arxiv</div>
+                    <div class="paper-year">2025</div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="#" target="_blank">
+                            <i class="fas fa-file-pdf"></i> GoodSAM++: Enhanced Segment Anything for Industrial Applications
+                        </a>
+                    </div>
+                    <div class="paper-conference">CVPR 2024</div>
+                    <div class="paper-year">2024</div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="#" target="_blank">
+                            <i class="fas fa-file-pdf"></i> 360SFUDA++: Unsupervised Domain Adaptation for Omnidirectional Scenes
+                        </a>
+                    </div>
+                    <div class="paper-conference">TPAMI 2024</div>
+                    <div class="paper-year">2024</div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="#" target="_blank">
+                            <i class="fas fa-file-pdf"></i> MemorySAM: Efficient Segmentation with Memory-Augmented Transformers
+                        </a>
+                    </div>
+                    <div class="paper-conference">Arxiv</div>
+                    <div class="paper-year">2025</div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="#" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Distortion-Aware Learning for Omnidirectional Images
+                        </a>
+                    </div>
+                    <div class="paper-conference">ECCV 2024</div>
+                    <div class="paper-year">2024</div>
+                </div>
+            </div>
         </div>
     </section>
+
     
     <!-- Research Team -->
     <section class="section" id="team">
